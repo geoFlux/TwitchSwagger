@@ -1,0 +1,4 @@
+.vs/
+TwitchSwagger/bin/
+TwitchSwagger/obj/
+*.csproj.user
