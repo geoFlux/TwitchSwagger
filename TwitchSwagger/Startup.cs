@@ -71,10 +71,12 @@ namespace TwitchSwagger
             app.UseMvc();            
             
             app.UseSwagger();
+
+            var clientId = Configuration.GetValue<string>("ClientId");
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Twitch Api");
-                c.ConfigureOAuth2("xjffch1g965xc91nh2orjqpy9ppg1a", null, "", "");
+                c.ConfigureOAuth2(clientId, null, "", "");
             });
         }
     }
