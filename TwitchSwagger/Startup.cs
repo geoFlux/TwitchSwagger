@@ -75,6 +75,7 @@ namespace TwitchSwagger
             var clientId = Configuration.GetValue<string>("ClientId");
             app.UseSwaggerUI(c =>
             {
+                c.RoutePrefix = "";
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Twitch Api");
                 c.ConfigureOAuth2(clientId, null, "", "");
             });
