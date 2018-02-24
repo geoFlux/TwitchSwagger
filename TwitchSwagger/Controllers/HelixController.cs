@@ -49,7 +49,7 @@ namespace TwitchSwagger.Controllers
         /// <param name="type">Type of video. Valid values: "all", "upload", "archive", and "highlight". Default: "all".</param>
         /// <returns></returns>
         [HttpGet("videos")]
-        public FollowsResponse Videos(
+        public VideosResponse Videos(
             string[] id,
             string user_id,
             string game_id,
